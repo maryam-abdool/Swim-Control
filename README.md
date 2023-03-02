@@ -1,39 +1,18 @@
-# Addressing Function Approximation Error in Actor-Critic Methods
+# Swim: A General-Purpose, High-Performing, and Efficient Activation Function for Locomotion Control Tasks
 
-PyTorch implementation of Twin Delayed Deep Deterministic Policy Gradients (TD3). If you use our code or data please cite the [paper](https://arxiv.org/abs/1802.09477).
+## Overview
+We propose Swim, a general-purpose, high-performing, and efficient activation function for locomotion control tasks. Swim is tested on tested on MuJuCo continuous control tasks using TD3. The code for TD3 in this repository is adapted from the original author’s implementation, which could be found here: https://github.com/sfujim/TD3
 
-Method is tested on [MuJoCo](http://www.mujoco.org/) continuous control tasks in [OpenAI gym](https://github.com/openai/gym). 
-Networks are trained using [PyTorch 1.2](https://github.com/pytorch/pytorch) and Python 3.7. 
+Swim is defined within the new() function in the TD3.py file (first function).
 
-### Usage
-The paper results can be reproduced by running:
-```
-./run_experiments.sh
-```
-Experiments on single environments can be run by calling:
-```
-python main.py --env HalfCheetah-v2
-```
+## Quick Start
 
-Hyper-parameters can be modified with different arguments to main.py. We include an implementation of DDPG (DDPG.py), which is not used in the paper, for easy comparison of hyper-parameters with TD3. This is not the implementation of "Our DDPG" as used in the paper (see OurDDPG.py). 
+Run python3 main.py in the main directory to start the training. Hyperparameters such as the seed and environment are defined in main.py and can be modified from the main.py itself or the terminal. 
 
-Algorithms which TD3 compares against (PPO, TRPO, ACKTR, DDPG) can be found at [OpenAI baselines repository](https://github.com/openai/baselines). 
+The results of the training are learning curves formatted as NumPy arrays of 201 evaluations (201,), stored under /learning_curves. To visualize the learning curves, see the examples provided in vis.py and run vis.py in the main directory. 
 
-### Results
-Code is no longer exactly representative of the code used in the paper. Minor adjustments to hyperparamters, etc, to improve performance. Learning curves are still the original results found in the paper.
+Videos are also created after training ends and are stored in the main directory. The videos could represent the results of the training or testing depending on the seed passed to the make_video() function defined in main.py. We leave that modifiable. If the user also wishes to not overwrite previous videos, the count variable, defined above the make_video() function, could be changed to store a new video under a new name. 
 
-Learning curves found in the paper are found under /learning_curves. Each learning curve are formatted as NumPy arrays of 201 evaluations (201,), where each evaluation corresponds to the average total reward from running the policy for 10 episodes with no exploration. The first evaluation is the randomly initialized policy network (unused in the paper). Evaluations are peformed every 5000 time steps, over a total of 1 million time steps. 
+To run the efficiency tests described in the paper, uncomment the two print statements under the train function under TD3.py 
 
-Numerical results can be found in the paper, or from the learning curves. Video of the learned agent can be found [here](https://youtu.be/x33Vw-6vzso). 
-
-### Bibtex
-
-```
-@inproceedings{fujimoto2018addressing,
-  title={Addressing Function Approximation Error in Actor-Critic Methods},
-  author={Fujimoto, Scott and Hoof, Herke and Meger, David},
-  booktitle={International Conference on Machine Learning},
-  pages={1582--1591},
-  year={2018}
-}
-```
+The default environment is the Walker-2d. Make sure to have MuJoCo and OpenAI Gym setup as well as matplotlib and PyTorch installed.

@@ -16,3 +16,7 @@ Videos are also created after training ends and are stored in the main directory
 To run the efficiency tests described in the paper, uncomment the two print statements under the train() function in TD3.py 
 
 The default environment is Walker-2d. Make sure to have MuJoCo and OpenAI gym setup as well as matplotlib and PyTorch installed.
+
+## Sample
+In addition to the sample videos presented in the repository, a sample video could be found embedded below or at https://youtube.com/shorts/Jk3nHKhl7Ds?feature=share
+

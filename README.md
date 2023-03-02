@@ -17,6 +17,6 @@ To run the efficiency tests described in the paper, uncomment the two print stat
 
 The default environment is Walker-2d. Make sure to have MuJoCo and OpenAI gym setup as well as matplotlib and PyTorch installed.
 
-## Sample
+## Sample Result
 In addition to the sample videos presented in the repository, a sample video could be found embedded below or at https://youtube.com/shorts/Jk3nHKhl7Ds?feature=share
 

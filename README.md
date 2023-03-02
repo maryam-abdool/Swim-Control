@@ -1,7 +1,7 @@
 # Swim: A General-Purpose, High-Performing, and Efficient Activation Function for Locomotion Control Tasks
 
 ## Overview
-We propose Swim, a general-purpose, high-performing, and efficient activation function for locomotion control tasks. Swim is tested on tested on MuJuCo continuous control tasks using TD3. The code for TD3 in this repository is adapted from the original author’s implementation, which could be found here: https://github.com/sfujim/TD3
+We propose Swim, a general-purpose, high-performing, and efficient activation function for locomotion control tasks. Swim is tested on MuJuCo continuous control tasks using TD3. The code for TD3 in this repository is adapted from the original author’s implementation, which could be found here: https://github.com/sfujim/TD3
 
 Swim is defined within the new() function in the TD3.py file (first function).
 

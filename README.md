@@ -20,3 +20,7 @@ The default environment is Walker-2d. Make sure to have MuJoCo and OpenAI gym se
 ## Sample Result
 In addition to the sample videos presented in the repository, a sample video could be found embedded below or at https://youtube.com/shorts/Jk3nHKhl7Ds?feature=share
 
+
+https://user-images.githubusercontent.com/78284219/222947528-e041973e-2a85-4e5d-a2e8-a0201b710c55.mp4
+
+
